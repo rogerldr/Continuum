@@ -87,7 +87,7 @@ dfdu: pd.DataFrame = dfcsv('Continuum_tipos_de_dados - DataUse.csv', src_dir)
 dfdt = dfdt.set_index('Authors')
 # clean dataframe
 del dfdt['Privacy concerns?']
-dt: pd.DataFrame = pd.DataFrame({'total': dfdt.sum(), 'perc':(dfdt.sum().values / len(dfdu))*100}, index=dfdt.sum().index)
+dt: pd.DataFrame = pd.DataFrame({'total': dfdt.sum(), 'perc':(dfdt.sum().values / len(dfdt))*100}, index=dfdt.sum().index)
 
 
 # Working with datause dataframe
