@@ -13,12 +13,12 @@ src_dir: str = os.path.join(parent_dir, 'src/')
 # Onde serão salvos os gráficos 
 graphs_dir: str = os.path.join(parent_dir, 'graphs/')
 
-def dfcsv(file_name: str, file_path: str) -> pd.DataFrame:
+def read_excel(file_name: str, file_path: str) -> pd.DataFrame:
     """
-    Reads a csv file and returns a dataframe.
+    Reads a xls file and returns a dataframe.
     """
     file: str = os.path.join(file_path, file_name)
-    df: pd.Dataframe = pd.read_csv(file)
+    df: pd.Dataframe = pd.read_excel(file)
     return df
 
 ## Graphs part
@@ -80,8 +80,8 @@ def correlation(df: pd.DataFrame, filename: str, title: str):
 
 
 ## Create a dataframe
-dfdt: pd.DataFrame = dfcsv('Continuum_tipos_de_dados - DataType.csv', src_dir)
-dfdu: pd.DataFrame = dfcsv('Continuum_tipos_de_dados - DataUse.csv', src_dir)
+dfdt: pd.DataFrame = read_excel('Continuum_tipos_de_dados - DataType.xlsx', src_dir)
+dfdu: pd.DataFrame = read_excel('Continuum_tipos_de_dados - DataUse.xlsx', src_dir)
 
 # Working with datatypes dataframe
 dfdt = dfdt.set_index('Authors')
