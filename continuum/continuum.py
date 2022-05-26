@@ -96,12 +96,12 @@ du: pd.DataFrame = pd.DataFrame({'total': dfdu.sum(), 'perc':(dfdu.sum().values 
 
 def main():
     ## Barplots
-    barplots(dt, 'barplot_datatype', title='Nome maneiro')
-    barplots(du, 'barplot_datause', title='Total of percentage  regarding literature review and consumer concern')
+    barplots(dt, 'barplot_datatype', title='Total of percentage regarding literature review and concumer concern')
+    barplots(du, 'barplot_datause', title='Total of percentage regarding literature review and consumer concern')
 
     ## Correlation plot
     correlation(dfdt, 'correlation_datatype', title='Correlation of consumer concern regarding the different types of personal data')
-    correlation(dfdu, 'correlation_datause', title='Correlation of consumer concern regarding the different types of personal data')
+    correlation(dfdu, 'correlation_datause', title='Correlation of consumer concern regarding the different uses of personal data')
 
 if __name__ == "__main__":
     main()
